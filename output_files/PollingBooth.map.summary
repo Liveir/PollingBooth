@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Feb 08 14:12:42 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : PollingBooth
+Top-level Entity Name : PollingBooth
+Family : MAX 10
+Total logic elements : 288
+    Total combinational functions : 288
+    Dedicated logic registers : 96
+Total registers : 96
+Total pins : 102
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

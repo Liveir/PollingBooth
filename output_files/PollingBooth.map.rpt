@@ -1,0 +1,405 @@
+Analysis & Synthesis report for PollingBooth
+Wed Feb 08 14:12:42 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Feb 08 14:12:42 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; PollingBooth                                ;
+; Top-level Entity Name              ; PollingBooth                                ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 288                                         ;
+;     Total combinational functions  ; 288                                         ;
+;     Dedicated logic registers      ; 96                                          ;
+; Total registers                    ; 96                                          ;
+; Total pins                         ; 102                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; PollingBooth       ; PollingBooth       ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
+; PollingBooth.v                   ; yes             ; User Verilog HDL File  ; E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/PollingBooth.v ;         ;
+; Counter.v                        ; yes             ; User Verilog HDL File  ; E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v      ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 288       ;
+;                                             ;           ;
+; Total combinational functions               ; 288       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 96        ;
+;     -- 3 input functions                    ; 99        ;
+;     -- <=2 input functions                  ; 93        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 195       ;
+;     -- arithmetic mode                      ; 93        ;
+;                                             ;           ;
+; Total registers                             ; 96        ;
+;     -- Dedicated logic registers            ; 96        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 102       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 288       ;
+; Total fan-out                               ; 1350      ;
+; Average fan-out                             ; 2.30      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name       ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
+; |PollingBooth              ; 288 (0)             ; 96 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 102  ; 0            ; 0          ; |PollingBooth             ; PollingBooth ; work         ;
+;    |counter:ct1|           ; 96 (96)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PollingBooth|counter:ct1 ; counter      ; work         ;
+;    |counter:ct2|           ; 96 (96)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PollingBooth|counter:ct2 ; counter      ; work         ;
+;    |counter:ct3|           ; 96 (96)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PollingBooth|counter:ct3 ; counter      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 96    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 96    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 102                         ;
+; cycloneiii_ff         ; 96                          ;
+;     CLR               ; 96                          ;
+; cycloneiii_lcell_comb ; 288                         ;
+;     arith             ; 93                          ;
+;         2 data inputs ; 90                          ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 195                         ;
+;         1 data inputs ; 3                           ;
+;         3 data inputs ; 96                          ;
+;         4 data inputs ; 96                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 3.40                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Feb 08 14:12:31 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PollingBooth -c PollingBooth
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file pollingbooth.v
+    Info (12023): Found entity 1: PollingBooth File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/PollingBooth.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: counter File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 1
+Info (12127): Elaborating entity "PollingBooth" for the top level hierarchy
+Info (12128): Elaborating entity "counter" for hierarchy "counter:ct1" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/PollingBooth.v Line: 14
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "counter:ct1|count[0]" is converted into an equivalent circuit using register "counter:ct1|count[0]~_emulated" and latch "counter:ct1|count[0]~1" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[1]" is converted into an equivalent circuit using register "counter:ct1|count[1]~_emulated" and latch "counter:ct1|count[1]~5" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[2]" is converted into an equivalent circuit using register "counter:ct1|count[2]~_emulated" and latch "counter:ct1|count[2]~9" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[3]" is converted into an equivalent circuit using register "counter:ct1|count[3]~_emulated" and latch "counter:ct1|count[3]~13" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[4]" is converted into an equivalent circuit using register "counter:ct1|count[4]~_emulated" and latch "counter:ct1|count[4]~17" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[5]" is converted into an equivalent circuit using register "counter:ct1|count[5]~_emulated" and latch "counter:ct1|count[5]~21" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[6]" is converted into an equivalent circuit using register "counter:ct1|count[6]~_emulated" and latch "counter:ct1|count[6]~25" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[7]" is converted into an equivalent circuit using register "counter:ct1|count[7]~_emulated" and latch "counter:ct1|count[7]~29" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[8]" is converted into an equivalent circuit using register "counter:ct1|count[8]~_emulated" and latch "counter:ct1|count[8]~33" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[9]" is converted into an equivalent circuit using register "counter:ct1|count[9]~_emulated" and latch "counter:ct1|count[9]~37" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[10]" is converted into an equivalent circuit using register "counter:ct1|count[10]~_emulated" and latch "counter:ct1|count[10]~41" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[11]" is converted into an equivalent circuit using register "counter:ct1|count[11]~_emulated" and latch "counter:ct1|count[11]~45" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[12]" is converted into an equivalent circuit using register "counter:ct1|count[12]~_emulated" and latch "counter:ct1|count[12]~49" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[13]" is converted into an equivalent circuit using register "counter:ct1|count[13]~_emulated" and latch "counter:ct1|count[13]~53" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[14]" is converted into an equivalent circuit using register "counter:ct1|count[14]~_emulated" and latch "counter:ct1|count[14]~57" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[15]" is converted into an equivalent circuit using register "counter:ct1|count[15]~_emulated" and latch "counter:ct1|count[15]~61" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[16]" is converted into an equivalent circuit using register "counter:ct1|count[16]~_emulated" and latch "counter:ct1|count[16]~65" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[17]" is converted into an equivalent circuit using register "counter:ct1|count[17]~_emulated" and latch "counter:ct1|count[17]~69" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[18]" is converted into an equivalent circuit using register "counter:ct1|count[18]~_emulated" and latch "counter:ct1|count[18]~73" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[19]" is converted into an equivalent circuit using register "counter:ct1|count[19]~_emulated" and latch "counter:ct1|count[19]~77" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[20]" is converted into an equivalent circuit using register "counter:ct1|count[20]~_emulated" and latch "counter:ct1|count[20]~81" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[21]" is converted into an equivalent circuit using register "counter:ct1|count[21]~_emulated" and latch "counter:ct1|count[21]~85" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[22]" is converted into an equivalent circuit using register "counter:ct1|count[22]~_emulated" and latch "counter:ct1|count[22]~89" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[23]" is converted into an equivalent circuit using register "counter:ct1|count[23]~_emulated" and latch "counter:ct1|count[23]~93" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[24]" is converted into an equivalent circuit using register "counter:ct1|count[24]~_emulated" and latch "counter:ct1|count[24]~97" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[25]" is converted into an equivalent circuit using register "counter:ct1|count[25]~_emulated" and latch "counter:ct1|count[25]~101" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[26]" is converted into an equivalent circuit using register "counter:ct1|count[26]~_emulated" and latch "counter:ct1|count[26]~105" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[27]" is converted into an equivalent circuit using register "counter:ct1|count[27]~_emulated" and latch "counter:ct1|count[27]~109" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[28]" is converted into an equivalent circuit using register "counter:ct1|count[28]~_emulated" and latch "counter:ct1|count[28]~113" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[29]" is converted into an equivalent circuit using register "counter:ct1|count[29]~_emulated" and latch "counter:ct1|count[29]~117" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[30]" is converted into an equivalent circuit using register "counter:ct1|count[30]~_emulated" and latch "counter:ct1|count[30]~121" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct1|count[31]" is converted into an equivalent circuit using register "counter:ct1|count[31]~_emulated" and latch "counter:ct1|count[31]~125" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[0]" is converted into an equivalent circuit using register "counter:ct2|count[0]~_emulated" and latch "counter:ct2|count[0]~1" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[1]" is converted into an equivalent circuit using register "counter:ct2|count[1]~_emulated" and latch "counter:ct2|count[1]~5" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[2]" is converted into an equivalent circuit using register "counter:ct2|count[2]~_emulated" and latch "counter:ct2|count[2]~9" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[3]" is converted into an equivalent circuit using register "counter:ct2|count[3]~_emulated" and latch "counter:ct2|count[3]~13" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[4]" is converted into an equivalent circuit using register "counter:ct2|count[4]~_emulated" and latch "counter:ct2|count[4]~17" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[5]" is converted into an equivalent circuit using register "counter:ct2|count[5]~_emulated" and latch "counter:ct2|count[5]~21" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[6]" is converted into an equivalent circuit using register "counter:ct2|count[6]~_emulated" and latch "counter:ct2|count[6]~25" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[7]" is converted into an equivalent circuit using register "counter:ct2|count[7]~_emulated" and latch "counter:ct2|count[7]~29" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[8]" is converted into an equivalent circuit using register "counter:ct2|count[8]~_emulated" and latch "counter:ct2|count[8]~33" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[9]" is converted into an equivalent circuit using register "counter:ct2|count[9]~_emulated" and latch "counter:ct2|count[9]~37" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[10]" is converted into an equivalent circuit using register "counter:ct2|count[10]~_emulated" and latch "counter:ct2|count[10]~41" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[11]" is converted into an equivalent circuit using register "counter:ct2|count[11]~_emulated" and latch "counter:ct2|count[11]~45" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[12]" is converted into an equivalent circuit using register "counter:ct2|count[12]~_emulated" and latch "counter:ct2|count[12]~49" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[13]" is converted into an equivalent circuit using register "counter:ct2|count[13]~_emulated" and latch "counter:ct2|count[13]~53" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[14]" is converted into an equivalent circuit using register "counter:ct2|count[14]~_emulated" and latch "counter:ct2|count[14]~57" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[15]" is converted into an equivalent circuit using register "counter:ct2|count[15]~_emulated" and latch "counter:ct2|count[15]~61" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[16]" is converted into an equivalent circuit using register "counter:ct2|count[16]~_emulated" and latch "counter:ct2|count[16]~65" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[17]" is converted into an equivalent circuit using register "counter:ct2|count[17]~_emulated" and latch "counter:ct2|count[17]~69" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[18]" is converted into an equivalent circuit using register "counter:ct2|count[18]~_emulated" and latch "counter:ct2|count[18]~73" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[19]" is converted into an equivalent circuit using register "counter:ct2|count[19]~_emulated" and latch "counter:ct2|count[19]~77" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[20]" is converted into an equivalent circuit using register "counter:ct2|count[20]~_emulated" and latch "counter:ct2|count[20]~81" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[21]" is converted into an equivalent circuit using register "counter:ct2|count[21]~_emulated" and latch "counter:ct2|count[21]~85" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[22]" is converted into an equivalent circuit using register "counter:ct2|count[22]~_emulated" and latch "counter:ct2|count[22]~89" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[23]" is converted into an equivalent circuit using register "counter:ct2|count[23]~_emulated" and latch "counter:ct2|count[23]~93" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[24]" is converted into an equivalent circuit using register "counter:ct2|count[24]~_emulated" and latch "counter:ct2|count[24]~97" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[25]" is converted into an equivalent circuit using register "counter:ct2|count[25]~_emulated" and latch "counter:ct2|count[25]~101" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[26]" is converted into an equivalent circuit using register "counter:ct2|count[26]~_emulated" and latch "counter:ct2|count[26]~105" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[27]" is converted into an equivalent circuit using register "counter:ct2|count[27]~_emulated" and latch "counter:ct2|count[27]~109" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[28]" is converted into an equivalent circuit using register "counter:ct2|count[28]~_emulated" and latch "counter:ct2|count[28]~113" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[29]" is converted into an equivalent circuit using register "counter:ct2|count[29]~_emulated" and latch "counter:ct2|count[29]~117" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[30]" is converted into an equivalent circuit using register "counter:ct2|count[30]~_emulated" and latch "counter:ct2|count[30]~121" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct2|count[31]" is converted into an equivalent circuit using register "counter:ct2|count[31]~_emulated" and latch "counter:ct2|count[31]~125" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[0]" is converted into an equivalent circuit using register "counter:ct3|count[0]~_emulated" and latch "counter:ct3|count[0]~1" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[1]" is converted into an equivalent circuit using register "counter:ct3|count[1]~_emulated" and latch "counter:ct3|count[1]~5" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[2]" is converted into an equivalent circuit using register "counter:ct3|count[2]~_emulated" and latch "counter:ct3|count[2]~9" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[3]" is converted into an equivalent circuit using register "counter:ct3|count[3]~_emulated" and latch "counter:ct3|count[3]~13" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[4]" is converted into an equivalent circuit using register "counter:ct3|count[4]~_emulated" and latch "counter:ct3|count[4]~17" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[5]" is converted into an equivalent circuit using register "counter:ct3|count[5]~_emulated" and latch "counter:ct3|count[5]~21" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[6]" is converted into an equivalent circuit using register "counter:ct3|count[6]~_emulated" and latch "counter:ct3|count[6]~25" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[7]" is converted into an equivalent circuit using register "counter:ct3|count[7]~_emulated" and latch "counter:ct3|count[7]~29" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[8]" is converted into an equivalent circuit using register "counter:ct3|count[8]~_emulated" and latch "counter:ct3|count[8]~33" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[9]" is converted into an equivalent circuit using register "counter:ct3|count[9]~_emulated" and latch "counter:ct3|count[9]~37" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[10]" is converted into an equivalent circuit using register "counter:ct3|count[10]~_emulated" and latch "counter:ct3|count[10]~41" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[11]" is converted into an equivalent circuit using register "counter:ct3|count[11]~_emulated" and latch "counter:ct3|count[11]~45" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[12]" is converted into an equivalent circuit using register "counter:ct3|count[12]~_emulated" and latch "counter:ct3|count[12]~49" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[13]" is converted into an equivalent circuit using register "counter:ct3|count[13]~_emulated" and latch "counter:ct3|count[13]~53" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[14]" is converted into an equivalent circuit using register "counter:ct3|count[14]~_emulated" and latch "counter:ct3|count[14]~57" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[15]" is converted into an equivalent circuit using register "counter:ct3|count[15]~_emulated" and latch "counter:ct3|count[15]~61" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[16]" is converted into an equivalent circuit using register "counter:ct3|count[16]~_emulated" and latch "counter:ct3|count[16]~65" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[17]" is converted into an equivalent circuit using register "counter:ct3|count[17]~_emulated" and latch "counter:ct3|count[17]~69" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[18]" is converted into an equivalent circuit using register "counter:ct3|count[18]~_emulated" and latch "counter:ct3|count[18]~73" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[19]" is converted into an equivalent circuit using register "counter:ct3|count[19]~_emulated" and latch "counter:ct3|count[19]~77" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[20]" is converted into an equivalent circuit using register "counter:ct3|count[20]~_emulated" and latch "counter:ct3|count[20]~81" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[21]" is converted into an equivalent circuit using register "counter:ct3|count[21]~_emulated" and latch "counter:ct3|count[21]~85" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[22]" is converted into an equivalent circuit using register "counter:ct3|count[22]~_emulated" and latch "counter:ct3|count[22]~89" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[23]" is converted into an equivalent circuit using register "counter:ct3|count[23]~_emulated" and latch "counter:ct3|count[23]~93" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[24]" is converted into an equivalent circuit using register "counter:ct3|count[24]~_emulated" and latch "counter:ct3|count[24]~97" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[25]" is converted into an equivalent circuit using register "counter:ct3|count[25]~_emulated" and latch "counter:ct3|count[25]~101" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[26]" is converted into an equivalent circuit using register "counter:ct3|count[26]~_emulated" and latch "counter:ct3|count[26]~105" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[27]" is converted into an equivalent circuit using register "counter:ct3|count[27]~_emulated" and latch "counter:ct3|count[27]~109" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[28]" is converted into an equivalent circuit using register "counter:ct3|count[28]~_emulated" and latch "counter:ct3|count[28]~113" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[29]" is converted into an equivalent circuit using register "counter:ct3|count[29]~_emulated" and latch "counter:ct3|count[29]~117" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[30]" is converted into an equivalent circuit using register "counter:ct3|count[30]~_emulated" and latch "counter:ct3|count[30]~121" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+    Warning (13310): Register "counter:ct3|count[31]" is converted into an equivalent circuit using register "counter:ct3|count[31]~_emulated" and latch "counter:ct3|count[31]~125" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/Counter.v Line: 25
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/output_files/PollingBooth.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_over" File: E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/PollingBooth.v Line: 7
+Info (21057): Implemented 486 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 96 output pins
+    Info (21061): Implemented 384 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Wed Feb 08 14:12:42 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:18
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/Rosso/School/USC/Third Year/First Sem/CPE 3101L - Introduction to HDL/Final Output/output_files/PollingBooth.map.smsg.
+
+
